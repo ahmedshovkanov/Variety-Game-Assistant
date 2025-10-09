@@ -2965,8 +2965,8 @@ MonoBehaviour:
     hasTime: 0
   startButton: {fileID: 277360256}
   timeWarningSound: {fileID: 0}
-  timeUpSound: {fileID: 0}
-  switchPlayerSound: {fileID: 0}
+  timeUpSound: {fileID: 8300000, guid: 34c7b98315fc6fd4590701782c17f311, type: 3}
+  switchPlayerSound: {fileID: 8300000, guid: 3aa01321a4c42dc438ad4d2534f245fe, type: 3}
 --- !u!1 &1747023032
 GameObject:
   m_ObjectHideFlags: 0
