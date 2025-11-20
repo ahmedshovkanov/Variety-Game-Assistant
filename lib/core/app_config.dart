@@ -18,7 +18,7 @@ class AppConfig {
 		// Указываем путь к изображению
 		// Для изображений из сети: NetworkImage('URL')
 		// Для локальных изображений: AssetImage('assets/image.jpg')
-		image: AssetImage('assets/images/background.jpg'),
+		image: AssetImage('assets/images/background.png'),
 		
 		// Режим заполнения - растягивает изображение на весь контейнер
 		fit: BoxFit.fill,
@@ -95,7 +95,7 @@ class AppConfig {
 		// Указываем путь к изображению
 		// Для изображений из сети: NetworkImage('URL')
 		// Для локальных изображений: AssetImage('assets/image.jpg')
-		image: AssetImage('assets/images/background.jpg'),
+		image: AssetImage('assets/images/background.png'),
 		
 		// Режим заполнения - растягивает изображение на весь контейнер
 		fit: BoxFit.cover,
@@ -141,7 +141,7 @@ class AppConfig {
   static const Color subtitleTextColor = Color(0x80FDFDFD);
 
   static const Color yesButtonColor = Color.fromARGB(255, 215, 5, 52);
-  static const Color yesButtonShadowColor = Color.fromARGB(255, 245, 174, 112);
+  static const Color yesButtonShadowColor = Color.fromARGB(255, 247, 59, 2);
   static const Color yesButtonTextColor = Color.fromARGB(255, 249, 239, 239);
   static const Color skipTextColor = Color.fromARGB(255, 231, 229, 229);
 
@@ -167,7 +167,7 @@ class AppConfig {
 
 // экран загрузки WebGL
   static String webGLEndpoint =
-      'https://play.unity.com/api/v1/games/game/1712c4c6-d525-479c-9aa7-303fbb78c940/build/latest/frame'; //'https://play.unity.com/en/games/1712c4c6-d525-479c-9aa7-303fbb78c940/robbies-coins';
+      'https://play.unity.com/api/v1/games/game/4edac71b-b16b-4ee1-96b6-e26638f14967/build/latest/frame'; //'https://play.unity.com/en/games/1712c4c6-d525-479c-9aa7-303fbb78c940/robbies-coins';
 
   static const Decoration webGLLoadingDecoration = BoxDecoration(
     gradient: AppConfig.splashGradient,

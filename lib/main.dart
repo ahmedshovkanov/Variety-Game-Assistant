@@ -1,4 +1,3 @@
-import 'package:break_out_water_challenge/core/screens/no_internet_connection.dart';
 import 'package:break_out_water_challenge/core/screens/push_request_screen.dart';
 import 'package:break_out_water_challenge/core/screens/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -27,7 +26,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CupertinoApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: PushRequestScreen(),
     );
   }
 }
