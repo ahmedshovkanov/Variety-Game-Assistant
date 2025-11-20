@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyBakQ7h4IcGjC9fwiNvFfmXHkjmZBTHimo</string>
+	<string>AIzaSyCCiGc6_XRYwGwLJ2VW5pshJR5po7o9Lsc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>94728548645</string>
+	<string>738712793863</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.toddhale.rabcoins</string>
+	<string>com.stefanb.vgameassist</string>
 	<key>PROJECT_ID</key>
-	<string>rabbits-coins</string>
+	<string>varietygameassistant</string>
 	<key>STORAGE_BUCKET</key>
-	<string>rabbits-coins.firebasestorage.app</string>
+	<string>varietygameassistant.firebasestorage.app</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:94728548645:ios:75731348906a7f4e4deacc</string>
+	<string>1:738712793863:ios:f166b65bdd08abc4b5cba2</string>
 </dict>
 </plist>

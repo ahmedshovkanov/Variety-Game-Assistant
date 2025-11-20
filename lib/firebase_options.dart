@@ -53,12 +53,12 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBakQ7h4IcGjC9fwiNvFfmXHkjmZBTHimo',
-    appId: '1:94728548645:ios:75731348906a7f4e4deacc',
-    messagingSenderId: '94728548645',
-    projectId: 'rabbits-coins',
-    storageBucket: 'rabbits-coins.firebasestorage.app',
-    iosBundleId: 'com.toddhale.rabcoins',
+    apiKey: 'AIzaSyCCiGc6_XRYwGwLJ2VW5pshJR5po7o9Lsc',
+    appId: '1:738712793863:ios:f166b65bdd08abc4b5cba2',
+    messagingSenderId: '738712793863',
+    projectId: 'varietygameassistant',
+    storageBucket: 'varietygameassistant.firebasestorage.app',
+    iosBundleId: 'com.stefanb.vgameassist',
   );
 
 }

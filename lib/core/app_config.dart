@@ -8,7 +8,7 @@ class AppConfig {
   static const String locale = 'en'; // Для iOS'
   static const String os = 'iOS'; // Для iOS'
   static const String endpoint = 'https://varietygameassistant.com'; // Для iOS'
-  static const String firebaseProjectId = ''; // Для iOS'
+  static const String firebaseProjectId = 'varietygameassistant'; // Для iOS'
 
 //UI Settings
 // Splash Screen
@@ -140,9 +140,9 @@ class AppConfig {
   static const Color titleTextColor = Color(0xFFFFFFFF);
   static const Color subtitleTextColor = Color(0x80FDFDFD);
 
-  static const Color yesButtonColor = Color(0xFFFAE29D);
+  static const Color yesButtonColor = Color.fromARGB(255, 215, 5, 52);
   static const Color yesButtonShadowColor = Color.fromARGB(255, 245, 174, 112);
-  static const Color yesButtonTextColor = Color.fromARGB(255, 0, 0, 0);
+  static const Color yesButtonTextColor = Color.fromARGB(255, 249, 239, 239);
   static const Color skipTextColor = Color.fromARGB(255, 231, 229, 229);
 
   // Путь к логотипу, если не находит добавить в pubspec.yaml
