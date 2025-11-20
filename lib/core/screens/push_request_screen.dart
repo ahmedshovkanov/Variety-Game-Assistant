@@ -56,8 +56,8 @@ class _PushRequestScreenState extends State<PushRequestScreen> {
                   flex: isLandscape ? 2 : 4,
                   child: Center(
                     child: SizedBox(
-                      width: isLandscape ? 400 : 500,   //200 250
-                      height: isLandscape ? 320 : 500,  //160 250
+                      width: isLandscape ? 400 : 500, // 400 500  //200 250
+                      height: isLandscape ? 320 : 500, //320 500  //160 250
                       child: const Image(
                         image: AssetImage(
                           'assets/images/Logo.png',
