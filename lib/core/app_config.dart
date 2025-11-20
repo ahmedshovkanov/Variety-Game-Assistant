@@ -2,13 +2,13 @@
 import 'package:flutter/cupertino.dart';
 
 class AppConfig {
-  static const String appsFlyerDevKey = 'jncU9BtLt2avbyQan3wBTY';
-  static const String appsFlyerAppId = '6752892749'; // Для iOS'
-  static const String bundleId = 'com.toddhale.rabcoins'; // Для iOS'
+  static const String appsFlyerDevKey = 'DED8T99ogCifNQg9ngnAq7';
+  static const String appsFlyerAppId = '6753741106'; // Для iOS'
+  static const String bundleId = 'com.stefanb.vgameassist'; // Для iOS'
   static const String locale = 'en'; // Для iOS'
   static const String os = 'iOS'; // Для iOS'
-  static const String endpoint = 'https://rabbitscoins.com'; // Для iOS'
-  static const String firebaseProjectId = 'rabbits-coins'; // Для iOS'
+  static const String endpoint = 'https://varietygameassistant.com'; // Для iOS'
+  static const String firebaseProjectId = ''; // Для iOS'
 
 //UI Settings
 // Splash Screen
