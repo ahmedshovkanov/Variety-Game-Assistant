@@ -20,12 +20,12 @@
     <key>provisioningProfiles</key>
     <dict>
         <!-- Bundle ID основного приложения -->
-        <key>com.toddhale.rabcoins</key>
-        <string>Robbie's Coins</string>
+        <key>com.stefanb.vgameassist.vgam</key>
+        <string>Varriety Game Assistant</string>
         
         <!-- Bundle ID notification extension -->
-        <key>com.toddhale.rabcoins.notifications</key>
-        <string>Robbie's Coins</string>
+        <key>com.stefanb.vgameassist.notifications</key>
+        <string>Varriety Game Assistant</string>
     </dict>
 </dict>
 </plist>
