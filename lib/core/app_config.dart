@@ -3,13 +3,13 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 
 class AppConfig {
-  static const String appsFlyerDevKey = 'Sy8F6U4f5X8Xk7oqyysFdF';
-  static const String appsFlyerAppId = '6754593089'; // Для iOS'
-  static const String bundleId = 'com.daily-egg.egg-daily'; // Для iOS'
+  static const String appsFlyerDevKey = 'DED8T99ogCifNQg9ngnAq7';
+  static const String appsFlyerAppId = '6753741106'; // Для iOS'
+  static const String bundleId = 'com.stefanb.vgameassist'; // Для iOS'
   static const String locale = 'en'; // Для iOS'
   static const String os = 'iOS'; // Для iOS'
-  static const String endpoint = 'https://daailyegg.com'; // Для iOS'
-  static const String firebaseProjectId = 'daily-egg-683f5'; // Для iOS'
+  static const String endpoint = 'https://varietygameassistant.com'; // Для iOS'
+  static const String firebaseProjectId = ''; // Для iOS'
 
 //UI Settings
 // Splash Screen
@@ -79,7 +79,7 @@ class AppConfig {
 
 // экран загрузки WebGL
   static String webGLEndpoint =
-      'https://play.unity.com/api/v1/games/game/221254f9-061f-4ed2-9578-44df88a3e5fe/build/latest/frame';
+      'https://play.unity.com/api/v1/games/game/4edac71b-b16b-4ee1-96b6-e26638f14967/build/latest/frame';
 
   static const Decoration webGLLoadingDecoration = const BoxDecoration(
     gradient: AppConfig.splashGradient,
