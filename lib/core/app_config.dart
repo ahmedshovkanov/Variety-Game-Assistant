@@ -21,7 +21,7 @@ class AppConfig {
 		image: AssetImage('assets/images/background.png'),
 		
 		// Режим заполнения - растягивает изображение на весь контейнер
-		fit: BoxFit.fill,
+		fit: BoxFit.cover,
 		// Альтернативные варианты fit:
 		// BoxFit.fill - растягивает с искажением пропорций
 		// BoxFit.contain - сохраняет пропорции, может быть с полями
