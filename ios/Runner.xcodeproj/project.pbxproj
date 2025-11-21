@@ -616,7 +616,7 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.toddhale.rabcoins.notifications";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanb.vgameassist.notifications";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "DropCost Not";
@@ -660,7 +660,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.toddhale.rabcoins.notifications";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanb.vgameassist.notifications";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "DropCost Not";
@@ -702,7 +702,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.toddhale.rabcoins.notifications";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanb.vgameassist.notifications";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "DropCost Not";
@@ -784,7 +784,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.toddhale.rabcoins";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanb.vgameassist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = DropCost;
@@ -810,7 +810,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = FUDF77N9L5;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.toddhale.rabcoins.RunnerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanb.vgameassist.RunnerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -831,7 +831,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = FUDF77N9L5;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.toddhale.rabcoins.RunnerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanb.vgameassist.RunnerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -850,7 +850,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = FUDF77N9L5;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.toddhale.rabcoins.RunnerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanb.vgameassist.RunnerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -988,7 +988,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.toddhale.rabcoins";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanb.vgameassist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = DropCost;
@@ -1023,7 +1023,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.toddhale.rabcoins";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stefanb.vgameassist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = DropCost;

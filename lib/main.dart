@@ -1,4 +1,3 @@
-import 'package:break_out_water_challenge/core/screens/push_request_screen.dart';
 import 'package:break_out_water_challenge/core/screens/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:shared_preferences/shared_preferences.dart';
