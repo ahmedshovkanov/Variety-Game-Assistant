@@ -1,4 +1,3 @@
-import 'package:external_app_launcher/external_app_launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:webview_flutter_platform_interface/webview_flutter_platform_interface.dart';
@@ -96,7 +95,7 @@ class _WebViewScreenState extends State<WebViewScreen> {
       urlToLoad = SdkInitializer.pushURL!;
     }
     print("3 showWeb pushURL ${SdkInitializer.pushURL}");
-    print("3 surlToLoad -${urlToLoad}-");
+    print("3 surlToLoad -$urlToLoad-");
     controller = WebKitWebViewController(
       WebKitWebViewControllerCreationParams(
         mediaTypesRequiringUserAction: const {},

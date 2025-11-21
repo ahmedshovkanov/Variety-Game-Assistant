@@ -5,7 +5,7 @@
     <key>method</key>
     <string>app-store</string>
     <key>teamID</key>
-    <string>VUY87NA86X</string>
+    <string>S7958FW2HB</string>
     <key>signingStyle</key>
     <string>manual</string>
     <key>uploadBitcode</key>
@@ -20,12 +20,12 @@
     <key>provisioningProfiles</key>
     <dict>
         <!-- Bundle ID основного приложения -->
-        <key>com.pinco-mind.mind-pinco</key>
-        <string>Tasty chicken lab</string>
+        <key>com.stefanb.vgameassist.vgam</key>
+        <string>Varriety Game Assistant</string>
         
         <!-- Bundle ID notification extension -->
-        <key>com.pinco-mind.mind-pinco.notifications</key>
-        <string>Tasty chicken lab Not</string>
+        <key>com.stefanb.vgameassist.notifications</key>
+        <string>Varriety Game Assistant</string>
     </dict>
 </dict>
 </plist>

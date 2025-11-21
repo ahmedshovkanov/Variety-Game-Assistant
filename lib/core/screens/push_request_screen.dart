@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:firebase_core/firebase_core.dart';
 import '../app_config.dart';
 import '../services/sdk_initializer.dart';
 import 'webview_screen.dart';
 
 class PushRequestScreen extends StatefulWidget {
-  const PushRequestScreen({Key? key}) : super(key: key);
+  const PushRequestScreen({super.key});
 
   @override
   State<PushRequestScreen> createState() => _PushRequestScreenState();
@@ -45,7 +44,7 @@ class _PushRequestScreenState extends State<PushRequestScreen> {
     return Scaffold(
       body: Container(
         decoration:
-            const BoxDecoration(gradient: AppConfig.pushRequestGradient),
+             AppConfig.pushRequestDecoration,
         child: LayoutBuilder(
           builder: (context, constraints) {
             return Column(
@@ -56,9 +55,9 @@ class _PushRequestScreenState extends State<PushRequestScreen> {
                 Expanded(
                   flex: isLandscape ? 2 : 4,
                   child: Center(
-                    child: Container(
-                      width: isLandscape ? 200 : 250,
-                      height: isLandscape ? 160 : 250,
+                    child: SizedBox(
+                      width: isLandscape ? 400 : 500, // 400 500  //200 250
+                      height: isLandscape ? 320 : 500, //320 500  //160 250
                       child: const Image(
                         image: AssetImage(
                           'assets/images/Logo.png',
@@ -72,9 +71,8 @@ class _PushRequestScreenState extends State<PushRequestScreen> {
                 Expanded(
                   flex: isLandscape ? 3 : 2,
                   child: Container(
-                    decoration: const BoxDecoration(
-                      gradient: AppConfig.pushRequestFadeGradient,
-                    ),
+                    //decoration: const BoxDecoration(gradient: AppConfig.pushRequestFadeGradient),
+                    decoration: AppConfig.pushRequestDecorationFade,
                     padding: EdgeInsets.symmetric(
                       horizontal: isLandscape ? 60 : 30,
                       vertical: 20,
@@ -92,7 +90,7 @@ class _PushRequestScreenState extends State<PushRequestScreen> {
                           child: Text(
                             'Allow notifications about bonuses and promos',
                             style: TextStyle(
-                              fontSize: isLandscape ? 18 : 16,
+                              fontSize: isLandscape ? 26 : 24,   // 18 16
                               fontWeight: FontWeight.w600,
                               color: AppConfig.titleTextColor,
                               height: 1.3,
@@ -111,9 +109,9 @@ class _PushRequestScreenState extends State<PushRequestScreen> {
                           child: Text(
                             'Stay tuned with best offers from our casino',
                             style: TextStyle(
-                              fontSize: isLandscape ? 16 : 14,
+                              fontSize: isLandscape ? 21 : 19,  // 16 14
                               fontWeight: FontWeight.w500,
-                              color: AppConfig.subtitleTextColor,
+                              color: const Color.fromARGB(183, 253, 253, 253),
                               height: 1.3,
                             ),
                             textAlign: TextAlign.center,
@@ -121,7 +119,7 @@ class _PushRequestScreenState extends State<PushRequestScreen> {
                         ),
 
                         // Кнопки
-                        Container(
+                        SizedBox(
                           width: double.infinity,
                           height: isLandscape ? 40 : 50,
                           //S  margin: const EdgeInsets.only(bottom: 15),
@@ -141,13 +139,13 @@ class _PushRequestScreenState extends State<PushRequestScreen> {
                             child: Text(
                               'Yes, I Want Bonuses!',
                               style: TextStyle(
-                                  fontSize: isLandscape ? 18 : 16,
+                                  fontSize: isLandscape ? 18 : 22,  // 18 16
                                   fontWeight: FontWeight.w600,
                                   color: AppConfig.yesButtonTextColor),
                             ),
                           ),
                         ),
-                        Container(
+                        SizedBox(
                           width: double.infinity,
                           height: isLandscape ? 40 : 50,
                           child: ElevatedButton(

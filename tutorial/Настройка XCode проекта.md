@@ -9,6 +9,6 @@
 
 В VS Code  нажмите Shift + Command + H, замените везде значение 
 ```
-com.daily-egg.egg-daily
+com.stefanb.vgameassist
 ```
 на Bundle ID вашего проекта
