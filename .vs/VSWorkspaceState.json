@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\assets",
+    "\\assets\\images",
+    "\\lib",
+    "\\lib\\core",
+    "\\lib\\core\\services",
+    "\\lib\\services"
+  ],
+  "SelectedNode": "\\lib\\core\\services\\sdk_initializer.dart",
+  "PreviewInSolutionExplorer": false
+}

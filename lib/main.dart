@@ -8,6 +8,7 @@ import 'package:flutter/cupertino.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  initTrackingAppTransparency();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   SdkInitializer.prefs = await SharedPreferences.getInstance();
   await SdkInitializer.loadRuntimeStorageToDevice();
@@ -16,6 +17,23 @@ void main() async {
   print('add af2 $isFirstStart $isOrganic');
   if (isFirstStart) SdkInitializer.initAppsFlyer();
   runApp(const App());
+}
+
+Future<void> initTrackingAppTransparency() async {
+  try {
+    final TrackingStatus status =
+        await AppTrackingTransparency.requestTrackingAuthorization();
+    print('App Tracking Transparency status: $status');
+    int timeout = 0;
+    while (status == TrackingStatus.notDetermined && timeout < 10) {
+      final TrackingStatus newStatus =
+          await AppTrackingTransparency.requestTrackingAuthorization();
+      await Future.delayed(const Duration(milliseconds: 200));
+      timeout++;
+    }
+  } catch (e) {
+    print('Error requesting App Tracking Transparency authorization: $e');
+  }
 }
 
 class App extends StatelessWidget {
