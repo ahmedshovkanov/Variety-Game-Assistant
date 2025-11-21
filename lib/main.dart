@@ -1,11 +1,10 @@
-import 'package:break_out_water_challenge/core/screens/splash_screen.dart';
+import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'core/services/sdk_initializer.dart';
 import 'firebase_options.dart';
 import 'package:flutter/cupertino.dart';
-
+import 'core/screens/splash_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   initTrackingAppTransparency();
@@ -18,7 +17,6 @@ void main() async {
   if (isFirstStart) SdkInitializer.initAppsFlyer();
   runApp(const App());
 }
-
 Future<void> initTrackingAppTransparency() async {
   try {
     final TrackingStatus status =
@@ -35,10 +33,8 @@ Future<void> initTrackingAppTransparency() async {
     print('Error requesting App Tracking Transparency authorization: $e');
   }
 }
-
 class App extends StatelessWidget {
   const App({super.key});
-
   @override
   Widget build(BuildContext context) {
     return const CupertinoApp(
@@ -47,5 +43,3 @@ class App extends StatelessWidget {
     );
   }
 }
-
-//SplashScreen
