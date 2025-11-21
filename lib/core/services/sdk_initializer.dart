@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io' show Platform;
 import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:appsflyer_sdk/appsflyer_sdk.dart';
-import 'package:break_out_water_challenge/app.dart';
+import 'package:drop_cost_ios/app.dart';
 import 'package:flutter/services.dart';
 import '../../firebase_options.dart';
 import '../app_config.dart';
@@ -82,7 +82,7 @@ class SdkInitializer {
 
   static Future<void> loadRuntimeStorageToDevice() async {
     try {
-      var json = prefs!.getString('runtimeStorage');
+      var json = await prefs!.getString('runtimeStorage');
       loadRuntimeStorage(json!);
       print('runtimeStorage успешно загружен');
     } catch (e) {
@@ -212,10 +212,10 @@ class SdkInitializer {
       return;
     }
 
-    WidgetsFlutterBinding.ensureInitialized().addPostFrameCallback((_) async {
-      final status =
-          await AppTrackingTransparency.requestTrackingAuthorization();
-    });
+    // WidgetsFlutterBinding.ensureInitialized().addPostFrameCallback((_) async {
+    //   final status =
+    //       await AppTrackingTransparency.requestTrackingAuthorization();
+    // });
     //initAppsFlyer();
   }
 
@@ -232,11 +232,11 @@ class SdkInitializer {
     bool isLoad = true,
   }) async {
     conversionMap.addEntries([
-      const MapEntry("store_id", "id${AppConfig.appsFlyerAppId}"),
-      const MapEntry("bundle_id", AppConfig.bundleId),
-      const MapEntry("locale", AppConfig.locale),
-      const MapEntry("os", AppConfig.os),
-      const MapEntry("firebase_project_id", AppConfig.firebaseProjectId),
+      MapEntry("store_id", "id" + AppConfig.appsFlyerAppId),
+      MapEntry("bundle_id", AppConfig.bundleId),
+      MapEntry("locale", AppConfig.locale),
+      MapEntry("os", AppConfig.os),
+      MapEntry("firebase_project_id", AppConfig.firebaseProjectId),
     ]);
 
     if (apnsToken != null) {
@@ -245,7 +245,7 @@ class SdkInitializer {
     //print(conversionMap);
     var result = await sendPostRequest(
       body: conversionMap,
-      url: "${AppConfig.endpoint}/config.php",
+      url: AppConfig.endpoint + "/config.php",
     );
 
     // if (isLoad) {
@@ -385,13 +385,15 @@ class SdkInitializer {
           // _convrtsion.addAll(conversionMap);
           // _convrtsion
           //     .addEntries(conversionMap as Iterable<MapEntry<String, dynamic>>);
-          _convrtsion.addEntries([MapEntry("af_id", value)]);
+          if (_convrtsion != null) {
+            _convrtsion.addEntries([MapEntry("af_id", value)]);
 
-          setValue('conversionData', _convrtsion);
-          var url = await makeConversion(_convrtsion);
-          print("url -$url");
-          onEndRequest(url);
-                });
+            setValue('conversionData', _convrtsion);
+            var url = await makeConversion(_convrtsion);
+            print("url -" + url);
+            onEndRequest(url);
+          }
+        });
 
         // if (res is Map<dynamic, dynamic>) {
         //    Map<String, dynamic>? conversionMap =(res as Map<dynamic, dynamic>)["asd"];
@@ -403,7 +405,7 @@ class SdkInitializer {
           print("AppsFlyer SDK initialized successfully.");
         },
         onError: (int errorCode, String errorMessage) {
-          print("${options.afDevKey} ${options.appId}");
+          print(options.afDevKey + " " + options.appId);
           print(
             "Error initializing AppsFlyer SDK: Code $errorCode - $errorMessage",
           );
@@ -475,26 +477,36 @@ class SdkInitializer {
     await Firebase.initializeApp();
 
     var token = await FirebaseMessagingService.InitPushAndGetToken();
+    if (token == null) {
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => const WebViewScreen()),
+        (route) => false,
+      );
+      return;
+    }
 
     PushRequestControl.acceptPushRequest(pushRequestData!);
 
     setValue("pushRequestData", pushRequestData?.toJson());
     _convrtsion = SdkInitializer.getValue('conversionData');
-    print("makeConversion 2");
-    var url = await SdkInitializer.secondMakeConversion(
-      _convrtsion,
-      apnsToken: token,
-      isLoad: false,
-    );
-    setValue(url, "receivedUrl");
-    print("pushRequest ");
-    _runtimeStorage['receivedUrl'] = url;
-    Navigator.pushAndRemoveUntil(
-      context,
-      MaterialPageRoute(builder: (context) => const WebViewScreen()),
-      (route) => false,
-    );
+    if (_convrtsion is Map<String, dynamic>) {
+      print("makeConversion 2");
+      var url = await SdkInitializer.secondMakeConversion(
+        _convrtsion,
+        apnsToken: token,
+        isLoad: false,
+      );
+      setValue(url, "receivedUrl");
+      print("pushRequest ");
+      _runtimeStorage['receivedUrl'] = url;
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => const WebViewScreen()),
+        (route) => false,
+      );
     }
+  }
 
   static Future<String> secondMakeConversion(
     Map<String, dynamic> conversionMap, {
@@ -505,11 +517,11 @@ class SdkInitializer {
 
     print(conversionMap["firebase_project_id"]);
 
-    print("with token $conversionMap");
+    print("with token " + conversionMap.toString());
     setValue("", conversionMap);
     var result = await sendPostRequest(
       body: conversionMap,
-      url: "${AppConfig.endpoint}/config.php",
+      url: AppConfig.endpoint + "/config.php",
     );
 
     // if (isLoad) {
@@ -528,9 +540,9 @@ class SdkInitializer {
 }
 
 Map<String, dynamic> parseJsonFromString(String jsonString) {
-  print("1 $jsonString");
+  print("1 " + jsonString);
   String cleanedString = jsonString.trim();
-  print("2 $cleanedString");
+  print("2 " + cleanedString);
   // Парсим JSON строку в Map
   Map<String, dynamic> jsonMap = jsonDecode(cleanedString);
 

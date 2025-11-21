@@ -53,12 +53,12 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCCiGc6_XRYwGwLJ2VW5pshJR5po7o9Lsc',
-    appId: '1:738712793863:ios:f166b65bdd08abc4b5cba2',
-    messagingSenderId: '738712793863',
-    projectId: 'varietygameassistant',
-    storageBucket: 'varietygameassistant.firebasestorage.app',
-    iosBundleId: 'com.stefanb.vgameassist',
+    apiKey: 'AIzaSyByZ5P-SBKR-hNx_kWddqTB7g7VJ2cpDfM',
+    appId: '1:559446481847:ios:579e74b7a471be90abe632',
+    messagingSenderId: '559446481847',
+    projectId: 'daily-egg-683f5',
+    storageBucket: 'daily-egg-683f5.firebasestorage.app',
+    iosBundleId: 'com.daily-egg.egg-daily',
   );
 
 }

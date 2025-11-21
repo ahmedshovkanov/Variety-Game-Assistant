@@ -1,9 +1,9 @@
+import 'package:drop_cost_ios/core/app_config.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:webview_flutter_platform_interface/webview_flutter_platform_interface.dart';
 import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 import 'package:url_launcher/url_launcher.dart';
-
-import 'core/app_config.dart';
 
 class WebGLWebViewScreen extends StatefulWidget {
   final String initialUrl;
@@ -219,7 +219,7 @@ class _WebGLWebViewScreenState extends State<WebGLWebViewScreen> {
             Positioned.fill(
               child: Container(
                 decoration: AppConfig
-                    .pushRequestDecoration, // const BoxDecoration(gradient: AppConfig.splashGradient),
+                    .webGLLoadingDecoration, // const BoxDecoration(gradient: AppConfig.splashGradient),
                 child: SafeArea(
                   child: Column(
                     children: [

@@ -11,7 +11,7 @@ String appsFlyerDevKey = 'etcnoiHPcQsZLcXsuVJmKJ';
 String appsFlyerAppId = '6754553353'; // Для iOS'
 
 //bandle id приложения
-String bundleId = 'com.stefanb.vgameassist'; // Для iOS'
+String bundleId = 'com.daily-egg.egg-daily'; // Для iOS'
 
 //локаль приложения
 String locale = 'en'; // Для iOS'

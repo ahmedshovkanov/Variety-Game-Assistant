@@ -1,4 +1,4 @@
-import 'package:break_out_water_challenge/core/app_config.dart';
+import 'package:drop_cost_ios/core/app_config.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 
@@ -19,7 +19,7 @@ class NoInternetConnectionScreen extends StatelessWidget {
   static void showIfNoInternet(BuildContext context) async {
     print('ShowIfNoInternet');
     Navigator.pushAndRemoveUntil(
-      context,
+      context!,
       MaterialPageRoute(
         builder: (context) => const NoInternetConnectionScreen(),
         fullscreenDialog: true,
@@ -34,7 +34,7 @@ class NoInternetConnectionScreen extends StatelessWidget {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.all(20),
         decoration: AppConfig.errorScreenDecoration,
         child: const Center(
           child: Column(

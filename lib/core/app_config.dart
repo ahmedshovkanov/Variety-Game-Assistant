@@ -1,132 +1,44 @@
+import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 
 class AppConfig {
-  static const String appsFlyerDevKey = 'DED8T99ogCifNQg9ngnAq7';
-  static const String appsFlyerAppId = '6753741106'; // Для iOS'
-  static const String bundleId = 'com.stefanb.vgameassist'; // Для iOS'
+  static const String appsFlyerDevKey = 'Sy8F6U4f5X8Xk7oqyysFdF';
+  static const String appsFlyerAppId = '6754593089'; // Для iOS'
+  static const String bundleId = 'com.daily-egg.egg-daily'; // Для iOS'
   static const String locale = 'en'; // Для iOS'
   static const String os = 'iOS'; // Для iOS'
-  static const String endpoint = 'https://varietygameassistant.com'; // Для iOS'
-  static const String firebaseProjectId = 'varietygameassistant'; // Для iOS'
+  static const String endpoint = 'https://daailyegg.com'; // Для iOS'
+  static const String firebaseProjectId = 'daily-egg-683f5'; // Для iOS'
 
 //UI Settings
 // Splash Screen
-  static const Decoration splashDecoration = BoxDecoration(
-    image: DecorationImage(
-	
-		// Указываем путь к изображению
-		// Для изображений из сети: NetworkImage('URL')
-		// Для локальных изображений: AssetImage('assets/image.jpg')
-		image: AssetImage('assets/images/background.png'),
-		
-		// Режим заполнения - растягивает изображение на весь контейнер
-		fit: BoxFit.fill,
-		// Альтернативные варианты fit:
-		// BoxFit.fill - растягивает с искажением пропорций
-		// BoxFit.contain - сохраняет пропорции, может быть с полями
-		// BoxFit.fitWidth - по ширине контейнера
-		// BoxFit.fitHeight - по высоте контейнера
-		// BoxFit.scaleDown - уменьшает если нужно, но не увеличивает
-    //cover
-		
-		// Выравнивание изображения (если есть свободное пространство)
-		alignment: Alignment.center,
-		// Повторение изображения (если не заполняет полностью)
-		// repeat: ImageRepeat.repeat, // повторять по обоим осям
-		// repeat: ImageRepeat.repeatX, // повторять по горизонтали
-		// repeat: ImageRepeat.repeatY, // повторять по вертикали
-		
-		// Цветовая фильтрация (можно наложить цвет поверх изображения)
-		// colorFilter: ColorFilter.mode(
-			// Colors.blue.withOpacity(0.3),
-			// BlendMode.color,
-		// ),
-	)
+  static const Decoration splashDecoration = const BoxDecoration(
+    gradient: AppConfig.splashGradient,
   );
 
   static const Gradient splashGradient = LinearGradient(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     colors: [
-      Color(0xFF2AFFFF),
-      Color(0xFF0D64AB),
+      Color(0xFF30225C),
+      Color(0xFF150B34),
     ],
   );
   static const Color loadingTextColor = Color(0xFFFFFFFF);
   static const Color spinerColor = Color(0xFCFFFFFF);
 // Push Request Screen Settings
 
-  static const Decoration pushRequestDecorationFade = BoxDecoration(
-    image: DecorationImage(
-	
-		// Указываем путь к изображению
-		// Для изображений из сети: NetworkImage('URL')
-		// Для локальных изображений: AssetImage('assets/image.jpg')
-		image: AssetImage('assets/images/fade.png'),
-		
-		// Режим заполнения - растягивает изображение на весь контейнер
-		fit: BoxFit.cover,
-		// Альтернативные варианты fit:
-		// BoxFit.fill - растягивает с искажением пропорций
-		// BoxFit.contain - сохраняет пропорции, может быть с полями
-		// BoxFit.fitWidth - по ширине контейнера
-		// BoxFit.fitHeight - по высоте контейнера
-		// BoxFit.scaleDown - уменьшает если нужно, но не увеличивает
-		
-		// Выравнивание изображения (если есть свободное пространство)
-		alignment: Alignment.center,
-		// Повторение изображения (если не заполняет полностью)
-		// repeat: ImageRepeat.repeat, // повторять по обоим осям
-		// repeat: ImageRepeat.repeatX, // повторять по горизонтали
-		// repeat: ImageRepeat.repeatY, // повторять по вертикали
-		
-		// Цветовая фильтрация (можно наложить цвет поверх изображения)
-		// colorFilter: ColorFilter.mode(
-			// Colors.blue.withOpacity(0.3),
-			// BlendMode.color,
-		// ),
-	)
-  );
-
-  static const Decoration pushRequestDecoration = BoxDecoration(
-    image: DecorationImage(
-	
-		// Указываем путь к изображению
-		// Для изображений из сети: NetworkImage('URL')
-		// Для локальных изображений: AssetImage('assets/image.jpg')
-		image: AssetImage('assets/images/background.png'),
-		
-		// Режим заполнения - растягивает изображение на весь контейнер
-		fit: BoxFit.cover,
-		// Альтернативные варианты fit:
-		// BoxFit.fill - растягивает с искажением пропорций
-		// BoxFit.contain - сохраняет пропорции, может быть с полями
-		// BoxFit.fitWidth - по ширине контейнера
-		// BoxFit.fitHeight - по высоте контейнера
-		// BoxFit.scaleDown - уменьшает если нужно, но не увеличивает
-		
-		// Выравнивание изображения (если есть свободное пространство)
-		alignment: Alignment.center,
-		// Повторение изображения (если не заполняет полностью)
-		// repeat: ImageRepeat.repeat, // повторять по обоим осям
-		// repeat: ImageRepeat.repeatX, // повторять по горизонтали
-		// repeat: ImageRepeat.repeatY, // повторять по вертикали
-		
-		// Цветовая фильтрация (можно наложить цвет поверх изображения)
-		// colorFilter: ColorFilter.mode(
-			// Colors.blue.withOpacity(0.3),
-			// BlendMode.color,
-		// ),
-	)
+  static const Decoration pushRequestDecoration = const BoxDecoration(
+    gradient: AppConfig.pushRequestFadeGradient,
   );
 
   static const Gradient pushRequestGradient = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
     colors: [
-      Color(0xFF2AFFFF),
-      Color(0xFF0D64AB),
+      Color(0xFF30225C),
+      Color(0xFF150B34),
     ],
   );
   static const Gradient pushRequestFadeGradient = LinearGradient(
@@ -140,17 +52,17 @@ class AppConfig {
   static const Color titleTextColor = Color(0xFFFFFFFF);
   static const Color subtitleTextColor = Color(0x80FDFDFD);
 
-  static const Color yesButtonColor = Color.fromARGB(255, 215, 5, 52);
-  static const Color yesButtonShadowColor = Color.fromARGB(255, 247, 59, 2);
-  static const Color yesButtonTextColor = Color.fromARGB(255, 249, 239, 239);
-  static const Color skipTextColor = Color.fromARGB(255, 231, 229, 229);
+  static const Color yesButtonColor = Color(0xFFFCB301);
+  static const Color yesButtonShadowColor = Color(0xA3D1710B);
+  static const Color yesButtonTextColor = Color(0xFFFFFFFF);
+  static const Color skipTextColor = Color(0x7DF9F9F9);
 
   // Путь к логотипу, если не находит добавить в pubspec.yaml
   static const String logoPath = 'assets/images/Logo.png';
 
   // экран ошибки подключения интернета
   // Splash Screen
-  static const Decoration errorScreenDecoration = BoxDecoration(
+  static const Decoration errorScreenDecoration = const BoxDecoration(
     gradient: AppConfig.errorScreenGradient,
   );
 
@@ -158,8 +70,8 @@ class AppConfig {
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     colors: [
-      Color.fromARGB(255, 119, 75, 17),
-      Color.fromARGB(255, 227, 154, 7),
+      Color(0xFF30225C),
+      Color(0xFF150B34),
     ],
   );
   static const Color errorScreenTextColor = Color(0xFFFFFFFF);
@@ -167,9 +79,9 @@ class AppConfig {
 
 // экран загрузки WebGL
   static String webGLEndpoint =
-      'https://play.unity.com/api/v1/games/game/4edac71b-b16b-4ee1-96b6-e26638f14967/build/latest/frame'; //'https://play.unity.com/en/games/1712c4c6-d525-479c-9aa7-303fbb78c940/robbies-coins';
+      'https://play.unity.com/api/v1/games/game/221254f9-061f-4ed2-9578-44df88a3e5fe/build/latest/frame';
 
-  static const Decoration webGLLoadingDecoration = BoxDecoration(
+  static const Decoration webGLLoadingDecoration = const BoxDecoration(
     gradient: AppConfig.splashGradient,
   );
   static const String webGLLoadingLogoPath = 'assets/images/Logo.png';
